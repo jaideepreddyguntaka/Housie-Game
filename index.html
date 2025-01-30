@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Housie Game</title>
+  </head>
+  <body>
+    <div class="left-side textBox">
+      <p class="inside-text">Check Is this number Over ?</p>
+      <input
+        id="clearInput"
+        class="input-num inum"
+        type="number"
+        class="guess"
+      /><br />
+      <button
+        id="buttonDis"
+        class="btn--check btn_check b-c-js"
+        disabled="disabled"
+      >
+        Check!
+      </button>
+      <p class="glow hidden no-yes-over yn-js clearTxt"></p>
+      <p class="hidden glow hidden not-start yno-js clearTxt">
+        Please Click On Start Game
+      </p>
+    </div>
+    <button class="btnstart start-game sgame">🥳 Start game</button>
+
+    <main>
+      <section class="table_css table1 player-active">
+        <table class="table--1" id="table--1--id">
+          <tr class="r1">
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+          </tr>
+          <tr class="r2">
+            <td>20</td>
+            <td>21</td>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+          </tr>
+          <tr class="r3">
+            <td>40</td>
+            <td>41</td>
+            <td>42</td>
+            <td>43</td>
+            <td>44</td>
+            <td>45</td>
+            <td>46</td>
+            <td>47</td>
+            <td>48</td>
+            <td>49</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="table_css table2">
+        <table class="table--2" style="width: 200%">
+          <tr class="r4">
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+            <th>15</th>
+            <th>16</th>
+            <th>17</th>
+            <th>18</th>
+            <th>19</th>
+          </tr>
+          <tr class="r4">
+            <td>30</td>
+            <td>31</td>
+            <td>32</td>
+            <td>33</td>
+            <td>34</td>
+            <td>35</td>
+            <td>36</td>
+            <td>37</td>
+            <td>38</td>
+            <td>39</td>
+          </tr>
+          <tr class="r5">
+            <td>50</td>
+            <td>51</td>
+            <td>52</td>
+            <td>53</td>
+            <td>54</td>
+            <td>55</td>
+            <td>56</td>
+            <td>57</td>
+            <td>58</td>
+            <td>59</td>
+          </tr>
+        </table>
+      </section>
+
+      <button class="btn new-game n-g">🔄 New game</button>
+      <p class="player p1 player-1">Player 1</p>
+      <p class="player p2 player-2">Player 2</p>
+      <button id="btnPlay" class="btn btn--roll showans" disabled="disabled">
+        🗳️ Pick A Number
+      </button>
+
+      <p class="btn btn--num randomnum hidden">Play</p>
+
+      <div class="pop--up p-u hidden">
+        <button class="close-modal cross_mark">&times;</button>
+        <p class="text--pop">
+          ⚠️ All results will be reset because you clicked this button in the
+          middle of the game.
+        </p>
+        <button class="btn--ok button_ok_js">Ok</button>
+      </div>
+    </main>
+
+    <div class="start-pop-up s-p-u hidden">
+      <button class="start-cross_mark s-c-m">&times;</button>
+      <p class="start--text--pop s-t-p">
+        🥱 Click On "START GAME" to start game and then click on "PICK A NUMBER"
+      </p>
+    </div>
+
+    <div class="lost-pop-up l-p-u hidden">
+      <button class="lost-cross_mark l-c-m">&times;</button>
+      <p class="lost--text--pop l-t-p">
+        😫 Both Lost Game. Not Marked All Numbers.
+      </p>
+      <button class="lost--ok lost_ok_js">Continue To New Game</button>
+    </div>
+
+    <div class="winner-pop-up w-p-u-1 winner_1 hidden">
+      <button class="winner-cross_mark w-c-m-1">&times;</button>
+      <p class="winner--text--pop w-t-p-1">🎉 Winner is Player 1</p>
+      <button class="winner--ok winner_ok_js-1">Continue To New Game</button>
+    </div>
+
+    <div class="winner-pop-up w-p-u-2 winner_2 hidden">
+      <button class="winner-cross_mark w-c-m-2">&times;</button>
+      <p class="winner--text--pop w-t-p-2">🎉 Winner is Player 2</p>
+      <button class="winner--ok winner_ok_js-2">Continue To New Game</button>
+    </div>
+
+    <div class="tie-pop-up t-p-u hidden">
+      <button class="tie-cross_mark t-c-m">&times;</button>
+      <p class="tie--text--pop t-t-p">🙆‍♂️ Tie occurred Between Players</p>
+      <button class="tie--ok tie_ok_js">Continue To New Game</button>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
